@@ -1,0 +1,287 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(0, 8%, 70%);
+  --first-color-light: hsl(0, 0%, 0%);
+  --second-color: #3f454d;
+  --dark-color: hsl(212, 40%, 12%);
+  --white-color: #FFF7FC;
+  --body-color: #000000;
+  --container-color: #151515;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+.card__button:hover{
+  border-radius: 20px;
+  color: #1a1c1f;
+  transition: 0.5s;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.proj{
+  color:#c5c6c7;
+   position: absolute;
+   top: 125vh;
+   width: 100%; 
+   font-size: 4rem; 
+   font-family: Yanone Kaffeesatz, sans-serif;
+   text-align: center;
+}
+
+/*=============== CARD ===============*/
+.container {
+  position: absolute;
+  top: 120vh;
+  left: 11vw;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color:#3A3B3C;
+}
+
+#rpc:hover{
+  color: #FFF7FC;
+  transition: 1s;
+  
+  
+}
+#pdf:hover{
+  color: #FFF7FC;
+  transition: 1s;
+  
+}
+#quiz:hover{
+  color: #FFF7FC;
+  transition: 1s;
+}
+#qr:hover{
+  color: #FFF7FC;
+  transition: 1s;
+}
+#hb:hover{
+  color: #FFF7FC;
+  
+  transition: 1s;
+
+}
+
+.card__container {
+  padding-block: 5rem;
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__image {
+  position: relative;
+  background-color: var(--first-color-light);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+  height:25vh ;
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  height: 40vh;
+}
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+.swiper-button-next:hover{
+  color:var(--first-color) ;
+  transition: 0.4s;
+
+}
+.swiper-button-prev:hover{
+  color: var(--first-color);
+  transition: 0.4s;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--second-color);
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+@media (min-width:376px) {
+  .container{
+    top:95vh;
+  }
+  .proj{
+    top:92vh;
+  }
+  .container{
+    top:99vh;
+  }
+}
+/* For medium devices */
+@media (min-width:450px){
+  .proj{
+    position: absolute;
+    top: 104vh;
+  }
+  .container{
+    top:110vh;
+  }
+}
+@media screen and (min-width:610px){
+  .proj{
+    position: absolute;
+    top: 90vh;
+  }
+  .container{
+    top:95vh;
+  }
+
+
+}
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+  .proj{
+    position: absolute;
+    top: 64vh;
+  }
+  .container{
+    top:67vh;
+  }
+}
+@media screen and (min-width:902px){
+  .proj{
+    position: absolute;
+    top: 87vh;
+  }
+  .container{
+    top:95vh;
+  }
+}
+/* For large devices */
+@media screen and (min-width: 1124px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+  .proj{
+    position: absolute;
+    top: 120vh;
+  }
+  .container{
+    top:130vh;
+  }
+  
+}

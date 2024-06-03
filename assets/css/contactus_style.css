@@ -1,0 +1,265 @@
+
+  
+button, input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  
+
+  
+  .container_c{
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+position: absolute;
+top: 250vh;
+display: flex;
+justify-content: center;
+height: 100vh;
+width: 100%;
+align-items: center;
+  }
+  
+  .screen {
+    position: relative;
+    background: #000000;
+    border-radius: 15px;
+    width: 90vw;
+    left: .2vw;
+
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(21, 21, 21, 0.4);
+    z-index: -1;
+  }
+  
+  .screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #070710;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .pic{
+    margin: 0px;
+    
+  }
+  .screen-header-left {
+    margin-right: auto;
+    
+  }
+  
+  
+  .screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: E6DDC4;
+  }
+  
+  .screen-header-button.close {
+    background: #678983;
+  }
+  
+  .screen-header-button.maximize {
+    background: #e8e925;
+  }
+  
+  .screen-header-button.minimize {
+    background: #74c54f;
+  }
+  
+  .screen-header-right {
+    display: flex;
+  }
+  
+  .screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+  }
+  
+  .screen-body {
+    display: flex;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+  }
+  #rpc_id:hover{
+    
+    transition: 1s ease-in-out;
+    z-index: 1;
+    padding-top: 0px;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #F6DCAC;
+    font-size: 26px;
+  }
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #E6DDC4;
+  }
+  
+  .app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #F0E9D2;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #F0E9D2;
+    font-size: 14px;
+  
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #F0E9D2;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #F6DCAC;
+    transition: 1s ease;
+  }
+  .d_right{
+    width: 40vw;
+  }
+  
+  .credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #F6DCAC;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .credits-link {
+    display: flex;
+    align-items: center;
+    color: #F0E9D2;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  
+  @media screen and (max-width: 520px) {
+    .screen-body {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .screen-body-item.left {
+      margin-bottom: 30px;
+      margin-left: 0px;
+    }
+  
+    .app-title {
+      flex-direction: row;
+    }
+  
+    .app-title span {
+      margin-right: 12px;
+    }
+  
+    .app-title:after {
+      display: none;
+    }
+    .pic{
+      display: none;
+    }
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    .screen-body {
+      padding: 40px;
+    }
+  
+    .screen-body-item {
+      padding: 0;
+    }
+    
+  }
+  @media (max-width:1200px){
+    .pic{
+      display: none;
+    }
+  }
+
+  
