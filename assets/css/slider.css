@@ -205,13 +205,26 @@ img {
   .card__data {
     padding: 1rem;
   }
+  .container{
+    width: 100vw;
+  }
+}
+@media(max-width:374px){
+  .container{
+    width: 98%;
+  
+  }
+  .card__data {
+    padding: 1rem;
+  }
 }
 @media (min-width:376px) {
   .container{
     top:95vh;
+
   }
   .proj{
-    top:92vh;
+    top:100vh;
   }
   .container{
     top:99vh;
@@ -221,10 +234,13 @@ img {
 @media (min-width:450px){
   .proj{
     position: absolute;
-    top: 104vh;
+    top: 108vh;
   }
   .container{
     top:110vh;
+  }
+  .card__data {
+    padding: 1rem;
   }
 }
 @media screen and (min-width:610px){
@@ -235,6 +251,7 @@ img {
   .container{
     top:95vh;
   }
+  
 
 
 }
